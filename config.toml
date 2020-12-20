@@ -28,7 +28,7 @@ enableGitInfo = true
 # [[menu.before]]
 [[menu.after]]
   name = "Github"
-  url = "https://github.com/tectu/CppProperties-Website"
+  url = "https://github.com/tectu/CppProperties"
   weight = 10
 
 
@@ -57,7 +57,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/tectu/CppProperties'
+  BookRepo = 'https://github.com/tectu/CppProperties-Website'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
