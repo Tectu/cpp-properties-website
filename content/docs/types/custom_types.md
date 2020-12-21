@@ -5,15 +5,17 @@ title: "Custom types"
 ---
 
 # Custom types
-Any type can be registered as a property type by specializing the existing `property<T>` template.
+Any type can be registered as a property type by specializing the existing `property<T>` template. This class template provides a member of type `T` named `data`.
 
 Asuming a custom type `color`:
 
 ```cpp
-// Our custom type
 struct color
 {
 	int red, green, blue;
+	
+	std::string to_string() const { /* ... */ }
+	void from_string(const std::string& str) { /* ... */ }
 }
 ```
 
@@ -32,13 +34,13 @@ struct tct::cppproperties::property<color> :
 		// Register to_string()
         this->to_string = [this]()
 		{
-			return this->data;
+			return data.to_string();
 		};
 		
 		// Register from_string()
         this->from_string = [this](const std::string& str)
 		{
-			*this = str;
+			return data.to_string();
 		};
     }
 };

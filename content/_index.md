@@ -3,39 +3,32 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+# CppProperties
+Welcome to the official documentation of the CppProperties library.
+Let's start off with a couple of useful links:
+- [Library GitHub Repository](https://github.com/tectu/cppproperties)
 
-{{< columns >}}
-## Astris ipse furtiva
+# Overview
+This is a C++20 library providing a property system to client classes.
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## Features
+The library is built with the following aspects in mind:
+- Modern C++
+- Easy to use
+- Providing "raw access" to the properties just as if they were regular class members.
+- Easy registration of custom property types.
+- Easy integration of optional (de)serialization (XML & JSON already optionally built-in).
+- Observer interface for property change notifications.
+- Support for linked properties (properties in a base class not implementing this library).
 
-<--->
+## Notes
+A couple of things to be aware of when using this library:
+- Requires a C++20 capable compiler
+- Properties are stored on the heap
+- The memory layout of `struct { MAKE_PROPERTY(a, int) };` is not the same as `struct { int a; };`
+- Property change notification observer callbacks are invoked by which ever thread modified the property value.
 
-## Suis quot vota
+## License
+This library is MIT licenses.
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
-
-
-## Tempora nisi nunc
-
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
-
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+It uses [tinyxml2](https://github.com/leethomason/tinyxml2) for XML (de)serialization. The tinyxml2 library itself is zlib licensed.
