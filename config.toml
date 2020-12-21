@@ -27,9 +27,13 @@ enableGitInfo = true
 [menu]
 # [[menu.before]]
 [[menu.after]]
-  name = "Github"
+  name = "GitHub"
   url = "https://github.com/tectu/CppProperties"
   weight = 10
+[[menu.after]]
+  name = "Author"
+  url = "https://silizium.io"
+  weight = 11
 
 
 [params]

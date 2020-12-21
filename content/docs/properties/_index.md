@@ -23,5 +23,6 @@ Note that a property type needs to be registered before it can be used. See [typ
 
 The following types of properties are available:
 - **[Raw properties](./raw_properties.md)**: This is the most common form of a property. Use this if you want to use a regular member variable as a property.
+- **[Nested properties](./nested_properties.md)**: Allows to created nested property structures when inheriting from a base class also defining properties.
 - **[Linked properties](./linked_properties.md)**: Linked properties are used when public or protected member variables of a base class should become properties.
 - **[Linked property functions](./linked_property_functions.md)**: Allows to use private members variables of a base class as properties.
